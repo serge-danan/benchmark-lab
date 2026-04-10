@@ -10,12 +10,19 @@ export default function Home() {
           émotionnelle.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/runs"
             className="inline-flex rounded-xl bg-black px-5 py-3 text-white"
           >
             Voir les runs
+          </Link>
+
+          <Link
+            href="/compare"
+            className="inline-flex rounded-xl border border-gray-300 bg-white px-5 py-3 text-gray-900"
+          >
+            Comparer les modèles
           </Link>
         </div>
       </div>

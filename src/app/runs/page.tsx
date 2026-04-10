@@ -312,7 +312,12 @@ export default async function RunsPage({ searchParams }: RunsPageProps) {
                 {runs.map((run) => (
                   <tr key={run.id} className="border-t border-gray-100">
                     <td className="px-5 py-4 font-medium text-gray-900">
-                      {run.run_name}
+                      <Link
+                        href={`/runs/${run.id}`}
+                        className="transition hover:text-blue-600 hover:underline"
+                      >
+                        {run.run_name}
+                      </Link>
                     </td>
                     <td className="px-5 py-4 text-gray-700">
                       {run.model_name}
@@ -349,7 +354,12 @@ export default async function RunsPage({ searchParams }: RunsPageProps) {
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="text-base font-semibold text-gray-900">
-                    {run.run_name}
+                    <Link
+                      href={`/runs/${run.id}`}
+                      className="transition hover:text-blue-600 hover:underline"
+                    >
+                      {run.run_name}
+                    </Link>
                   </h3>
                   <span className="inline-flex rounded-full bg-gray-100 px-2.5 py-1 text-sm font-medium text-gray-800">
                     {(run.accuracy * 100).toFixed(1)}%
